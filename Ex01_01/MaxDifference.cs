@@ -4,7 +4,7 @@ namespace Ex01_01
 {
     internal class MaxDifference
     {
-        private static int MaxDefferenceCounter(string s)
+        private static int maxDefferenceCounter(string s)
         {
             int numOfones = 0;
             int numOfzeros = 0;
@@ -24,9 +24,9 @@ namespace Ex01_01
         public static void LongestBitSequence(string binary1, string binary2, string binary3)
         {
             //check bit squence
-            int binary1Counter = MaxDefferenceCounter(binary1);
-            int binary2Counter = MaxDefferenceCounter(binary2);
-            int binary3Counter = MaxDefferenceCounter(binary3);
+            int binary1Counter = maxDefferenceCounter(binary1);
+            int binary2Counter = maxDefferenceCounter(binary2);
+            int binary3Counter = maxDefferenceCounter(binary3);
             int maxCounterValue = Math.Max(Math.Max(binary1Counter, binary2Counter), binary3Counter);
             string message = "Number with maximum difference between 1s and 0s:";
             if (binary1Counter == binary2Counter && binary1Counter == maxCounterValue)

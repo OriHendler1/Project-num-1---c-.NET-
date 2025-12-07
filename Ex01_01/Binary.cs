@@ -7,7 +7,7 @@ namespace Ex01_01
 {
     class Binary
     {
-        private static bool BinaryStartAndEndSameChar(string binaryNum)
+        private static bool binaryStartAndEndSameChar(string binaryNum)
         {
             return binaryNum[0] == binaryNum[binaryNum.Length - 1];
         }
@@ -39,17 +39,17 @@ namespace Ex01_01
         {
             string binaryExample = "";
             int counter = 0;           
-            if (BinaryStartAndEndSameChar(binary1))
+            if (binaryStartAndEndSameChar(binary1))
             {
                 binaryExample += binary1;
                 counter++;
             }
-            if (BinaryStartAndEndSameChar(binary2))
+            if (binaryStartAndEndSameChar(binary2))
             {
                 binaryExample += ", " + binary2;
                 counter++;
             }
-            if (BinaryStartAndEndSameChar(binary3))
+            if (binaryStartAndEndSameChar(binary3))
             {
                 binaryExample += ", " + binary3;
                 counter++;

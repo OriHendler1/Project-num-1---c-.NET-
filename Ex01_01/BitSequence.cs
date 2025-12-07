@@ -5,7 +5,7 @@ namespace Ex01_01
 {
     class BitSequence
     {
-        private static int SquenceCounter(string s)
+        private static int squenceCounter(string s)
         {
             int binaryInt = int.Parse(s);
             int binaryCounter = 1;
@@ -31,9 +31,9 @@ namespace Ex01_01
         public static void ShortestBitSequence(string binary1, string binary2, string binary3)
         {
             //check bit squence
-            int binary1Counter = BitSequence.SquenceCounter(binary1);
-            int binary2Counter = BitSequence.SquenceCounter(binary2);
-            int binary3Counter = BitSequence.SquenceCounter(binary3);
+            int binary1Counter = BitSequence.squenceCounter(binary1);
+            int binary2Counter = BitSequence.squenceCounter(binary2);
+            int binary3Counter = BitSequence.squenceCounter(binary3);
             int minCounterValue = Math.Min(Math.Min(binary1Counter, binary2Counter), binary3Counter);
             string message = "Shortest bit sequence:";
             if (binary1Counter == binary2Counter && binary1Counter == binary3Counter)

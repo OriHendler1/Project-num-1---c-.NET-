@@ -4,7 +4,7 @@ namespace Ex01_03
 {
     class TreePro
     {
-        private static bool HeightCheck(string height)
+        private static bool heightCheck(string height)
         {
             int heightInt = int.Parse(height);
             if (heightInt <= 15 && heightInt >= 4)
@@ -27,7 +27,7 @@ namespace Ex01_03
             //get height and check if valid
             System.Console.WriteLine("Hi, please enter the tree height you want (anywhere between 4 and 15):");
             string treeHeight = System.Console.ReadLine();
-            while (HeightCheck(treeHeight) == false)
+            while (heightCheck(treeHeight) == false)
             {
                 System.Console.WriteLine("Error - please enter valid number between 4  and 15");
                 treeHeight = System.Console.ReadLine();

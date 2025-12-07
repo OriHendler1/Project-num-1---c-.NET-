@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ex01_02
 {
-    internal class Tree
+    class Tree
     {
         private static string spaces(int num)
         {
