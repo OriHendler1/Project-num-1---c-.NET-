@@ -6,9 +6,9 @@ namespace Ex01_04
 {
     class CheckString
     {
-        private static bool isPalindrome(StringBuilder i_input,int i_start, int i_end )
+        private static bool isPalindrome(StringBuilder i_input, int i_start, int i_end)
         {
-            if (i_start <= i_end)
+            if (i_start >= i_end)
             {
                 return true;
             }
@@ -80,18 +80,19 @@ namespace Ex01_04
         }
         public static void CheckStringAnalysis(string i_userInput) //change the name
         {
-            //get new string
-            System.Console.WriteLine("Input:{0}", i_userInput);
             //check if string is palindorme
             StringBuilder userInputSb = new StringBuilder(i_userInput);
             bool isPalindormeResult = isPalindrome(userInputSb, 0, i_userInput.Length - 1);
             System.Console.WriteLine("Is Palindorme: {0}", isPalindormeResult);
             //if divided by 3
             checkIfStringDivideBy3(i_userInput);
-            //number of Lowercase
-            System.Console.WriteLine("Number of Lowercase: {0}", numOfLowercase(i_userInput));
-            //ascending alphbetical order
-            System.Console.WriteLine("Is in ascending alphbetical order: {0}", ascendingAlphbeticalOrder(i_userInput));
+            if (ifStringAllNumber(i_userInput) == false)
+            { 
+                //number of Lowercase
+                System.Console.WriteLine("Number of Lowercase: {0}", numOfLowercase(i_userInput));
+                //ascending alphbetical order
+                System.Console.WriteLine("Is in ascending alphbetical order: {0}", ascendingAlphbeticalOrder(i_userInput));
+            }
         }
 
     }
