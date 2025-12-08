@@ -4,8 +4,7 @@
     {
         public static void Main()
         {
-            string userInput = NewString.GetNewString();
-            CheckString.CheckStringAnalysis(userInput);
+            CheckString.CheckStringAnalysis(NewString.GetNewString());
         }
     }
 }
