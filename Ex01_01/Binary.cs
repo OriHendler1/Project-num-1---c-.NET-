@@ -7,54 +7,55 @@ namespace Ex01_01
 {
     class Binary
     {
-        private static bool binaryStartAndEndSameChar(string binaryNum)
+        private static bool binaryStartAndEndSameChar(string i_binaryStr)
         {
-            return binaryNum[0] == binaryNum[binaryNum.Length - 1];
+            return i_binaryStr[0] == i_binaryStr[i_binaryStr.Length - 1];
         }
-        public static bool IsBinary(string s)
+        public static bool IsBinary(string i_strInput)
         {
-            foreach (char c in s)
+            bool isValid = true;
+            foreach (char c in i_strInput)
             { 
                 if (c != '0' && c != '1')
                 {
-                return false;
+                return !isValid;
                 }
             }
-        return true;
+        return isValid;
         }
-        public static double BinarytoDecimal(int x)
+        public static double BinaryToDecimal(int i_binaryNum)
         {
             double decimalNumber = 0;
             int i = 0;
-            while(x > 0) 
+            while(i_binaryNum > 0) 
             {
-                int tempNumber = x % 10;
-                x /= 10;
+                int tempNumber = i_binaryNum % 10;
+                i_binaryNum /= 10;
                 decimalNumber += tempNumber * Math.Pow(2, i);
                 i++;
             }
             return decimalNumber;
         }
-        public static void BinaryStartAndEndSameCharCount(string binary1, string binary2, string binary3)
+        public static void BinaryStartAndEndSameCharCount(string i_binary1, string i_binary2, string i_binary3)
         {
             string binaryExample = "";
             int counter = 0;           
-            if (binaryStartAndEndSameChar(binary1))
+            if (binaryStartAndEndSameChar(i_binary1))
             {
-                binaryExample += binary1;
+                binaryExample += i_binary1;
                 counter++;
             }
-            if (binaryStartAndEndSameChar(binary2))
+            if (binaryStartAndEndSameChar(i_binary2))
             {
-                binaryExample += ", " + binary2;
+                binaryExample += ", " + i_binary2;
                 counter++;
             }
-            if (binaryStartAndEndSameChar(binary3))
+            if (binaryStartAndEndSameChar(i_binary3))
             {
-                binaryExample += ", " + binary3;
+                binaryExample += ", " + i_binary3;
                 counter++;
             }
-            string message = string.Format("Numbers that start and end with same digit:{0} ({1})", counter, binaryExample);
+            string message = string.Format("Numbers that start and end with same digit: {0} ({1})", counter, binaryExample);
             System.Console.WriteLine(message);
         }
     }

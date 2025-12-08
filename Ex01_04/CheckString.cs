@@ -8,23 +8,25 @@ namespace Ex01_04
     {
         private static bool isPalindrome(StringBuilder i_input, int i_start, int i_end)
         {
+            bool isValid = true;
             if (i_start >= i_end)
             {
-                return true;
+                return isValid;
             }
             if (i_input[i_start] != i_input[i_end])
             {
-                return false;
+                return !isValid;
             }
             return isPalindrome(i_input, i_start + 1, i_end - 1);
         }
         private static bool ifStringAllNumber(string i_input)
         {
+            bool isAllNumbers = true;
             if (long.TryParse(i_input, out long i_number))
             {
-                return true;
+                return isAllNumbers;
             }
-                return false;
+                return !isAllNumbers;
         }
         private static void checkIfStringDivideBy3(string i_input)
         {
@@ -38,14 +40,15 @@ namespace Ex01_04
         }
         private static bool ifStringAllLetters(string i_input)
         {
+            bool isAllLetters = true;
             foreach (char i_c in i_input)
             {
                 if (char.IsLetter(i_c) == false)
                 { 
-                    return false;
+                    return !isAllLetters;
                 }
             }
-            return true;
+            return isAllLetters;
         }
         private static int numOfLowercase(string i_input)
         {
@@ -64,6 +67,7 @@ namespace Ex01_04
         }
         private static bool ascendingAlphbeticalOrder(string i_input)
         {
+            bool isAlphbeticalOrder = true;
             if (ifStringAllLetters(i_input) == true)
             {
                 i_input = i_input.ToLower();
@@ -71,12 +75,12 @@ namespace Ex01_04
                 {
                     if (i_input[i] >= i_input[i + 1])
                     {
-                        return false;
+                        return !isAlphbeticalOrder;
                     }
                 }
-                return true;
+                return isAlphbeticalOrder;
             }
-            return false;
+            return !isAlphbeticalOrder;
         }
         public static void CheckStringAnalysis(string i_userInput) //change the name
         {

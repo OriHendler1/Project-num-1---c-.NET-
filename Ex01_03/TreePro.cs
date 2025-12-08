@@ -4,19 +4,20 @@ namespace Ex01_03
 {
     class TreePro
     {
-        private static bool heightCheck(string height)
+        private static bool heightCheck(string i_height)
         {
-            int heightInt = int.Parse(height);
+            bool validHight = true;
+            int heightInt = int.Parse(i_height);
             if (heightInt <= 15 && heightInt >= 4)
             {
-                return true;
+                return validHight;
             }
-            return false;
+            return !validHight;
         }
-        private static string spaces(int num)
+        private static string spaces(int i_num)
         {
             string space = " ";
-            for (int j = 0; j < num; j++)
+            for (int j = 0; j < i_num; j++)
             {
                 space += " ";
             }

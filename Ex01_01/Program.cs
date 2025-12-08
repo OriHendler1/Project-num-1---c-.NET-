@@ -16,9 +16,9 @@ namespace Ex01_01
             int secondNumberInt = int.Parse(secondNumberStr);
             int thirdNumberInt = int.Parse(thirdNumberStr);
             //convert binary number to decimal
-            double firstNumberDecimal = Binary.BinarytoDecimal(firstNumberInt);
-            double secondNumberDecimal = Binary.BinarytoDecimal(secondNumberInt);
-            double thirdNumberDecimal = Binary.BinarytoDecimal(thirdNumberInt);
+            double firstNumberDecimal = Binary.BinaryToDecimal(firstNumberInt);
+            double secondNumberDecimal = Binary.BinaryToDecimal(secondNumberInt);
+            double thirdNumberDecimal = Binary.BinaryToDecimal(thirdNumberInt);
             //check if first number is the min decimal
             MinNumber.printNumbersInsAscending(firstNumberDecimal, firstNumberStr,secondNumberDecimal, secondNumberStr, thirdNumberDecimal, thirdNumberStr);
             //check avg (1.1)

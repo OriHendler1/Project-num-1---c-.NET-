@@ -4,50 +4,50 @@ namespace Ex01_01
 {
     class MinNumber
     {
-        public static void printNumbersInsAscending(double firstNum, string firstStr, double secondNum, string secondStr, double thirdNum, string thirdStr)
+        public static void printNumbersInsAscending(double i_firstNum, string i_firstStr, double i_secondNum, string i_secondStr, double i_thirdNum, string i_thirdStr)
         {
-            double maxDecimal = Math.Max (Math.Max(firstNum, secondNum),thirdNum);
-            double minDecimal = Math.Min(Math.Min(firstNum, secondNum), thirdNum);
+            double maxDecimal = Math.Max (Math.Max(i_firstNum, i_secondNum),i_thirdNum);
+            double minDecimal = Math.Min(Math.Min(i_firstNum, i_secondNum), i_thirdNum);
             string message = "Decimal numbers in ascending order: ";
-            if (firstNum == minDecimal)
+            if (i_firstNum == minDecimal)
             {
-                if (thirdNum == maxDecimal)
+                if (i_thirdNum == maxDecimal)
                 {
                     System.Console.WriteLine("{0} {1} ({2}), {3} ({4}), {5} ({6})", message,
-                    firstNum, firstStr,secondNum, secondStr,thirdNum, thirdStr);
+                    i_firstNum, i_firstStr,i_secondNum, i_secondStr,i_thirdNum, i_thirdStr);
                 }
                 else
                 {
                     System.Console.WriteLine("{0} {1} ({2}), {3} ({4}), {5} ({6})", message,
-                    firstNum, firstStr,thirdNum, thirdStr,secondNum, secondStr);
+                    i_firstNum, i_firstStr,i_thirdNum, i_thirdStr,i_secondNum, i_secondStr);
                 }
             }
             //check if second number is the min decimal
-            if (secondNum == minDecimal)
+            if (i_secondNum == minDecimal)
             {
-                if (maxDecimal == thirdNum)
+                if (maxDecimal == i_thirdNum)
                 {
                     System.Console.WriteLine("{0} {1} ({2}), {3} ({4}), {5} ({6})", message,
-                    secondNum, secondStr,firstNum, firstStr,thirdNum, thirdStr);
+                    i_secondNum, i_secondStr,i_firstNum, i_firstStr,i_thirdNum, i_thirdStr);
                 }
                 else
                 {
                     System.Console.WriteLine("{0} {1} ({2}), {3} ({4}), {5} ({6})", message,
-                    secondNum, secondStr,thirdNum, thirdStr, firstNum, firstStr);
+                    i_secondNum, i_secondStr,i_thirdNum, i_thirdStr, i_firstNum, i_firstStr);
                 }
             }
             //check if third number is the min decimal
-            if (thirdNum == minDecimal)
+            if (i_thirdNum == minDecimal)
             {
-                if (firstNum < secondNum)
+                if (i_firstNum < i_secondNum)
                 {
                     System.Console.WriteLine("{0} {1} ({2}), {3} ({4}), {5} ({6})", message,
-                    thirdNum, thirdStr,firstNum, firstStr,secondNum, secondStr);
+                    i_thirdNum, i_thirdStr,i_firstNum, i_firstStr,i_secondNum, i_secondStr);
                 }
                 else
                 {
                     System.Console.WriteLine("{0} {1} ({2}), {3} ({4}), {5} ({6})", message,
-                    thirdNum, thirdStr,secondNum, secondStr,firstNum, firstStr);
+                    i_thirdNum, i_thirdStr,i_secondNum, i_secondStr,i_firstNum, i_firstStr);
                 }
             }
         }

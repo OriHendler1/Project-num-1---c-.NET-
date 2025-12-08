@@ -9,10 +9,10 @@ namespace Ex01_02
 {
     class Tree
     {
-        private static string spaces(int num)
+        private static string spaces(int i_num)
         {
             string space = " ";
-            for (int j = 0; j < num; j++)
+            for (int j = 0; j < i_num; j++)
             {
                 space += " ";
             }
